@@ -44,10 +44,10 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/mykit_delay?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    url: jdbc:mysql://192.168.1.113:3306/repair_order?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
     driverClassName: com.mysql.jdbc.Driver
     username: root
-    password: 123456
+    password: fjhckj@Mysql1130
     type: com.alibaba.druid.pool.DruidDataSource
     filters: stat
     maxActive: 30
@@ -64,8 +64,8 @@ spring:
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
   redis:
-    host: 127.0.0.1
-    password:
+    host: 192.168.1.113
+    password: '123456'
     port: 6379
     timeout: 60000
     database: 1
