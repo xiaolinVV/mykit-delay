@@ -1,3 +1,4 @@
 io.mykit.delay.queue.cqp.RocketMQConsumeQueue
 io.mykit.delay.queue.cqp.ConsoleConsumeQueue
 io.mykit.delay.queue.cqp.ActiveMQConsumeQueue
+io.mykit.delay.queue.cqp.KafkaConsumeQueue
