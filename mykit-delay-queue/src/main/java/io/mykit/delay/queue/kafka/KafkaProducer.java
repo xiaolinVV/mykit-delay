@@ -48,12 +48,12 @@ public class KafkaProducer {
 
                 @Override
                 public void onSuccess(SendResult<String, String> result) {
-                    logger.error("Kafka send success.");
+                    logger.info("Kafka send success.");
                 }
 
                 @Override
                 public void onFailure(Throwable ex) {
-                    logger.error("Kafka send failed. {}",ex);
+                    logger.info("Kafka send failed. {}",ex);
                 }
             });
             // 这里的输出日志, 不能用fastjson, fastjson默认依赖bean的setter/getter方法,

@@ -43,6 +43,7 @@ public class KafkaConsumeQueue implements ConsumeQueueProvider {
     public void consumer(Job job) throws ConsumeQueueException {
         KafkaProducer kafkaProducer = KafkaSenderFactory.getKafkaProducer(KafkaSenderFactory.JMS_TOPIC_SENDER);
         if (kafkaProducer != null) {
+            logger.info("发送kafka消息：{}", job.toJsonString());
             kafkaProducer.send(job.getTopic(), job.toJsonString());
         } else {
             logger.info("未获取到队列发送句柄....");
